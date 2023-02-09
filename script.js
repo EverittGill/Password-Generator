@@ -1,18 +1,20 @@
 // Assignment code here
+var generateBtn = document.querySelector("#generate");
 var characterConfirm; 
 var uppercaseConfirm;
 var lowercaseConfirm;
 var numbersConfirm;
 var input;
-var choice;
+var choice = [];
+var yourPassword = "";
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-specialCharacters = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
+specialCharacters = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", " < ", "=", " > ", " ? ", "@", "[", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 lowercaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 uppercaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
 // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+// var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   console.log("you clicked the button");
@@ -25,7 +27,7 @@ console.log("your length is " + passwordLength + " characters long");
      alert("Type a number between 8 and 128 in that box. refresh and try it again");
   }  else if (passwordLength < 7 || passwordLength > 129) {
     input = parseInt(alert("Try again, this time with a number between 8 and 128"));
-    generatePassword();
+    return("");
   }  else {
     numbersConfirm = confirm("Will your password contain numbers?");
     characterConfirm = confirm("Will your password contain special characters?");
@@ -36,7 +38,7 @@ console.log("your length is " + passwordLength + " characters long");
   // if they didn't input any character criteria then this runs
   if (!numbersConfirm && !characterConfirm && !lowercaseConfirm && !uppercaseConfirm) {
     choice = alert("You done goofed and didn't choose any criteria for your password. Run it again");
-    generatePassword()
+    return("");
     // if they choose to use everything then this will run
   } else if (numbersConfirm && characterConfirm && lowercaseConfirm && uppercaseConfirm) {
       choice = specialCharacters.concat(numbers, lowercaseLetters, uppercaseLetters)
@@ -77,24 +79,46 @@ console.log("your length is " + passwordLength + " characters long");
 };
 
 
+console.log(choice);
+console.log(passwordLength);
+for (let i = 0; i < passwordLength; i++) {
+  placeholder = choice[Math.floor(Math.random() * choice.length)];
+  // choice[i]
+  // yourPassword.concat(placeholder);
+  yourPassword+=placeholder;
+  
+}
+
+console.log(yourPassword);
+return yourPassword;
+
+
+}
+
+
+
+
+
+
+
 // console.log(choice)
 
 
-function randomizeChoice(choice) {
+// function randomizeChoice(arr) {
 
-    for (var i = 0; i < passwordLength; i++) {
-      var Password = choice[Math.floor(Math.random() * choice.length)];
-      Password.push(Password);
-    }
-  return choice;
-}
+//     for (var i = 0; i < passwordLength; i++) {
+//       var yourPassword = arr[Math.floor(Math.random() * arr.length)];
+//       yourPassword.push(yourPassword);
+//     }
+//   return arr;
+// }
 
-randomizeChoice()
+// randomizeChoice(arr)
 
-}
+
 // console.log(randomizeChoice(choice));
 
-generatePassword()
+// generatePassword()
 // var passwordCharacters = prompt("Choose from what characters you'd like to include from, special characters, upper case characters, lower case characters, and numbers");
 
 
