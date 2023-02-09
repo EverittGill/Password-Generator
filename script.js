@@ -77,11 +77,22 @@ console.log("your length is " + passwordLength + " characters long");
 };
 
 
+// console.log(choice)
+
+
+function randomizeChoice(choice) {
+
+    for (var i = 0; i < passwordLength; i++) {
+      var Password = choice[Math.floor(Math.random() * choice.length)];
+      Password.push(Password);
+    }
+  return choice;
 }
 
+randomizeChoice()
 
-
-
+}
+// console.log(randomizeChoice(choice));
 
 generatePassword()
 // var passwordCharacters = prompt("Choose from what characters you'd like to include from, special characters, upper case characters, lower case characters, and numbers");
