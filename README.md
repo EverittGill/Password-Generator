@@ -31,7 +31,7 @@ https://everittgill.github.io/Password-Generator/
 Smash that big red button and follow the prompts. Cancel equals "no" and OK equals "yes". Use them enough times and you will get a new password as a reward, so long as you want it to be between 8 and 128 characters.
 
 
-    ![alt text](https://github.com/EverittGill/Password-Generator/blob/main/assets/PasswordGeneratorHomePage.png)
+    ![alt text](assets/PasswordGeneratorHomePage.png)
 
 
 ## Credits
