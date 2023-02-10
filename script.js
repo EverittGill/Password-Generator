@@ -13,8 +13,7 @@ specialCharacters = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-",
 lowercaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 uppercaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
-// Get references to the #generate element
-// var generateBtn = document.querySelector("#generate");
+
 
 function generatePassword() {
   console.log("you clicked the button");
@@ -25,7 +24,7 @@ var passwordLength = prompt("Please choose a password length between 8 and 128 c
 console.log("your length is " + passwordLength + " characters long");
   if (!passwordLength) {
      alert("Type a number between 8 and 128 in that box. refresh and try it again");
-  }  else if (passwordLength < 7 || passwordLength > 129) {
+  }  else if (passwordLength < 8 || passwordLength > 12) {
     input = parseInt(alert("Try again, this time with a number between 8 and 128"));
     return("");
   }  else {
@@ -83,8 +82,6 @@ console.log(choice);
 console.log(passwordLength);
 for (let i = 0; i < passwordLength; i++) {
   placeholder = choice[Math.floor(Math.random() * choice.length)];
-  // choice[i]
-  // yourPassword.concat(placeholder);
   yourPassword+=placeholder;
   
 }
@@ -99,40 +96,6 @@ return yourPassword;
 
 
 
-
-
-// console.log(choice)
-
-
-// function randomizeChoice(arr) {
-
-//     for (var i = 0; i < passwordLength; i++) {
-//       var yourPassword = arr[Math.floor(Math.random() * arr.length)];
-//       yourPassword.push(yourPassword);
-//     }
-//   return arr;
-// }
-
-// randomizeChoice(arr)
-
-
-// console.log(randomizeChoice(choice));
-
-// generatePassword()
-// var passwordCharacters = prompt("Choose from what characters you'd like to include from, special characters, upper case characters, lower case characters, and numbers");
-
-
-
-      // B. uppercase, lowercase, numbers, special characters
-// 2. validate the input
-// 3. generate the password based on the criteria
-// 4. display the password 
-
-
-
-
-
-  // return "Generated password will go here";
 
 
 
