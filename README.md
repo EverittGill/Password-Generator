@@ -22,7 +22,7 @@ Provide a short description explaining the what, why, and how of your project. U
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+There's no need to install anything to use this application, just follow this link and click the big red button. Once you're there it should look like the image below. Follow the prompts and then copy your new password when it's displayed.
 
 ## Usage
 
