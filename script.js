@@ -24,7 +24,7 @@ var passwordLength = prompt("Please choose a password length between 8 and 128 c
 console.log("your length is " + passwordLength + " characters long");
   if (!passwordLength) {
      alert("Type a number between 8 and 128 in that box. refresh and try it again");
-  }  else if (passwordLength < 8 || passwordLength > 12) {
+  }  else if (passwordLength < 8 || passwordLength > 128) {
     input = parseInt(alert("Try again, this time with a number between 8 and 128"));
     return("");
   }  else {
