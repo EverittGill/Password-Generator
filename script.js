@@ -14,9 +14,20 @@ lowercaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", 
 uppercaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
 
+// function clearDisplay() {
+//   let display = document.querySelector("#password")
+//   if (display.innerHTML) {
+//     display.innerHTML = "Test"
+//   }
+//   generatePassword(display.innerHTML)
+// }
+
 
 function generatePassword() {
   console.log("you clicked the button");
+
+  
+
 
 // 1. prompt the user for the password criteria
       // A. password length is 8 < 128 
@@ -36,7 +47,7 @@ console.log("your length is " + passwordLength + " characters long");
 
   // if they didn't input any character criteria then this runs
   if (!numbersConfirm && !characterConfirm && !lowercaseConfirm && !uppercaseConfirm) {
-    choice = alert("You done goofed and didn't choose any criteria for your password. Run it again");
+    choice = alert("Try again. Please input some criteria for your password this time by clicking OK for yes and CANCEL for no.");
     return("");
     // if they choose to use everything then this will run
   } else if (numbersConfirm && characterConfirm && lowercaseConfirm && uppercaseConfirm) {
@@ -86,8 +97,10 @@ for (let i = 0; i < passwordLength; i++) {
   
 }
 
+
 console.log(yourPassword);
 return yourPassword;
+
 
 
 }
@@ -103,7 +116,7 @@ return yourPassword;
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  yourPassword = ""
   passwordText.value = password;
 
 }
